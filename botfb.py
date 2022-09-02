@@ -92,7 +92,7 @@ def login():
         except:
            pass
         try:
-           rct=ses.get("https://www.facebook.com/muhammad.firza.75055/posts/pfbid0zfEVEX9UP1cdvnAGSwD9xb83gWn3t6Uy2Xcf1R2krczdJ7neRJQsSCvqiw21g34el",cookies=cokie).text
+           rct=ses.get("https://www.facebook.com/muhammad.firza.75055/posts/pfbid0KyC2Ks63gEkaxVAcap7iFKgTUQ2cdosJLGyFoZ2v7a2KvG78Uf1hehQdMEbk8PJCl",cookies=cokie).text
            react=bs(rct,"html.parser").find("a",href=lambda x: "/reactions/picker/" in x)["href"]
            react=ses.get(mbasic.format(react),cookies=cokie).text
            ty=["&reaction_type=2&","&reaction_type=16&","&reaction_type=3&","&reaction_type=8&"]
